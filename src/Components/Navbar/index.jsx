@@ -1,68 +1,49 @@
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
 
-const navbar = () => {
+const Navbar = () => {
     return (
-        <nav>
-            <ul>
-                <li>
-                    <NavLink to='/'>
-                    Shopi
-                    </NavLink>
+        <nav className="flex justify-between items-center fixed z-10 w-full py-5 px-5 text-sm font-light">
+            {/* Grupo Izquierdo */}
+            <ul className="flex items-center space-x-4 gap-3">
+                <li className="font-semibold text-lg">
+                    <NavLink to='/'>Shopi</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/'>
-                    All
-                    </NavLink>
+                    <NavLink to='/'>All</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/clothes'>
-                    Clothes
-                    </NavLink>
+                    <NavLink to='/clothes'>Clothes</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/eletronisc'>
-                    Eletronisc
-                    </NavLink>
+                    <NavLink to='/electronics'>Electronics</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/furnitures'>
-                    Furnitures
-                    </NavLink>
+                    <NavLink to='/furnitures'>Furnitures</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/toys'>
-                    Toys
-                    </NavLink>
+                    <NavLink to='/toys'>Toys</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/others'>
-                    Others
-                    </NavLink>
-                </li>
-                <li>
-                    jouribero@cesde.net
-                </li>
-                <li>
-                    <NavLink to='/my-Orders'>
-                    MyOrders
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink to='/my-Account'>
-                    My Account
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink to='/Sign-in'>
-                    Sign In
-                    </NavLink>
-                </li>
-                <li>
-                🛒
+                    <NavLink to='/others'>Others</NavLink>
                 </li>
             </ul>
-        </nav>
-    )
-}
 
-export default navbar
+            {/* Grupo Derecho */}
+            <ul className="flex items-center space-x-4 gap-3">
+                <li>jouribero@cesde.net</li>
+                <li>
+                    <NavLink to='/my-orders'>My Orders</NavLink>
+                </li>
+                <li>
+                    <NavLink to='/my-account'>My Account</NavLink>
+                </li>
+                <li>
+                    <NavLink to='/sign-in'>Sign In</NavLink>
+                </li>
+                <li>🛒</li>
+            </ul>
+        </nav>
+    );
+};
+
+export default Navbar;
