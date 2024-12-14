@@ -1,10 +1,11 @@
-function Home() {
+import Layout from "../../Components/Layout";
 
-    return (
-      <div className="bg-red-100">
-        Home
-      </div>
-    )
-  }
-  
-  export default Home
+function Home() {
+  return (
+    <Layout>
+      Home
+    </Layout>
+  );
+}
+
+export default Home;
