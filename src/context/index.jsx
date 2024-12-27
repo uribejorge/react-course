@@ -1,15 +1,18 @@
-import { defaults } from "autoprefixer";
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
-const ShoppingCardContext = createContext ()
+// Crear el contexto
+export const ShoppingCardContext = createContext();
 
-export const  ShoppingCardProvider = ({children}) => {
-   
+// Proveedor del contexto
+export const ShoppingCardProvider = ({ children }) => {
+    const [count, setCount] = useState(0);
+    
+
     return (
-        <ShoppingCardContext.Provider>
-        {children}
+        <ShoppingCardContext.Provider value={{ count, setCount }}>
+            {children}
         </ShoppingCardContext.Provider>
-    )
-}
+    );
+};
 
-export default ShoppingCardProvider
+export default ShoppingCardProvider;
